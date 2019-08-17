@@ -1,0 +1,35 @@
+<%- include('./includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/eventform.css">
+</head>
+
+<body>
+   <%- include('./includes/navigation.ejs') %>
+
+    <main>
+        <div class="container">
+            <form action="/event" method="POST">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="events">Events</label>
+              <select id="events" name="events">
+                <option value="birthday">Birthday</option>
+                <option value="cocktail">Cocktail Party</option>
+                <option value="engagement">Engagement</option>
+                <option value="sangeet">Sangeet</option>
+                <option value="corporate">Corporate Events</option>
+              </select>
+          
+              <label for="description">Description</label>
+              <textarea id="description" name="description" placeholder="What all you want in your event.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+    </main>
+<%- include('./includes/end.ejs') %>

@@ -1,0 +1,32 @@
+<div class="backdrop"></div>
+<header class="main-header">
+    <button id="side-menu-toggle">Menu</button>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <% if (!isAuthenticated) { %>
+            <li class="main-header__item">
+                <a href="/events-list">Events List</a>
+            </li>
+            <li class="main-header__item">
+                <a href="/login">Login</a>
+            </li>
+            <li class="main-header__item">
+                <a href="/signup">Signup</a>
+            </li>
+            <% } %>
+            <% if (isAuthenticated) { %>
+            <li class="main-header__item">
+                <a href="/event">Home</a>
+            </li>
+            <li class="main-header__item">
+                <a href="/events-list">Events List</a>
+            </li>
+            <li class="main-header__item">
+                <form action="/logout" method="POST">
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
